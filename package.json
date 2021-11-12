@@ -2,13 +2,18 @@
   "name": "web-pie-progress",
   "version": "0.0.1",
   "description": "Pie progress indicator web component",
-  "main": "index.js",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "directories": {
+    "src": "src"
+  },  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "do publish test": "npm publish --dry-run",
+    "do publish": "npm publish"
   },
   "repository": {
     "type": "git",
-    "url": "web-pie-progress"
+    "url": "git+https://github.com/uriegel/web-pie-progress"
   },
   "keywords": [
     "javascript",
@@ -16,5 +21,9 @@
     "web-component"
   ],
   "author": "Uwe Riegel",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uriegel/web-menu-bar/issues"
+  },
+  "homepage": "https://github.com/uriegel/web-menu-bar#readme"
 }

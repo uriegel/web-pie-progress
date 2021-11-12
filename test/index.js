@@ -1,4 +1,4 @@
-import '../index.js'
+import '../src/index.js'
 
 const progress = document.getElementById("progress")
 
