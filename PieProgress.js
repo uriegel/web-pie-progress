@@ -14,41 +14,25 @@ export class PieProgress extends HTMLElement {
         const template = document.createElement('template')
         template.innerHTML = ` 
             <style>
-                #pie {
-                    aspect-ratio: 1;
-                    height: 100%;
-                    border-radius: 50%;
-                    background: var(--pieprogress-background-color);
-                    background-image: linear-gradient(to right, transparent 50%, var(--pieprogress-color) 0);
-                }
-                #pie::before {
-                    content: '';
-                    display: block;
-                    margin-left: 50%;
-                    height: 100%;
-                    border-radius: 0 100% 100% 0 / 50%;
-                    background-color: inherit;
-                    transform-origin: left;
-                    transform: rotate(140deg);
-                }
                 svg {
                     aspect-ratio: 1;
                     height: 100%;
-                    transform: rotate(-90deg);
-                    border-radius: 50%;
-                    background: var(--pieprogress-background-color);
                 }
-                circle {
+                #background {
                     fill: var(--pieprogress-background-color);
+                }
+                #pi {
+                    fill: transparent;
                     stroke: var(--pieprogress-color);
-                    stroke-width: 32;
-                    stroke-dasharray: 40 100;
+                    stroke-width: 50;
+                    stroke-dasharray: calc(45 * 3.14159 *50 / 100) calc(3.14159 *50);
+                    transform: rotate(-90deg) translate(-100px)
                 }
             </style>
             
-            <div id=pie></div>
-            <svg id=pie2 viewBox="0 0 32 32">
-                <circle r="16" cx="16" cy="16"/>
+            <svg id=pie viewBox="0 0 100 100">
+                <circle id="background" r="50" cx="50" cy="50"/>
+                <circle id="pi" r="25" cx="50" cy="50"/>
             </svg> 
         `
         this.shadowRoot.appendChild(template.content.cloneNode(true))
