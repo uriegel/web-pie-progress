@@ -2,7 +2,7 @@
 using UwebServer;
 using UwebServer.Routes;
 
-var port = 9885;ertert
+var port = 9885;
 
 var routeWebSite = new Static() { FilePath = "." };
 var server = new Server(new()
