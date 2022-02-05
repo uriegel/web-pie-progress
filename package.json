@@ -1,16 +1,18 @@
 {
   "name": "web-pie-progress",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Pie progress indicator web component",
   "main": "src/index.js",
   "module": "src/index.js",
   "directories": {
     "src": "src"
-  },  
-  "scripts": {
-    "do publish test": "npm publish --dry-run",
-    "do publish": "npm publish"
   },
+  "scripts": {
+    "typescript": "tsc -p typescript",
+    "typescript-test": "tsc -p test",
+    "do publish test": "npm run typescript && npm publish --dry-run",
+    "do publish": "npm run typescript && npm publish"
+   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uriegel/web-pie-progress"
@@ -25,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/uriegel/web-menu-bar/issues"
   },
-  "homepage": "https://github.com/uriegel/web-menu-bar#readme"
+  "homepage": "https://github.com/uriegel/web-menu-bar#readme",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
 }
